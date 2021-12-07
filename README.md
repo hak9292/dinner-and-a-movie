@@ -4,16 +4,31 @@
 ## Table of Contents
 
 1. [Description](#description)
-2. [Link to Deployed Page](#link-to-deployed-page)
-3. [How to Use the Application](#how-to-use-the-application)
-4. [Credits](#credits)
+2. [Demo](#demo)
+3. [User Story](#user-story)
+4. [User Flow Diagram](#user-flow-diagram)
+5. [Link to Deployed Page](#link-to-deployed-page)
+6. [How to Use the Application](#how-to-use-the-application)
+7. [Authors](#authors)
 
 ## Description
 
 (More text here)
 
 
+## Demo
 
+## User Story
+
+## User Flow Diagram
+
+```mermaid
+graph LR
+A[Square Rect] -- Link text --> B((Circle))
+A --> C(Round Rect)
+B --> D{Rhombus}
+C --> D
+```
 
 ## Link to Deployed Page
 
@@ -29,7 +44,7 @@
 5. Repeat step 2 as necessary.
 6. Press "Start Over" at the bottom of the page if you would like to start over.
 
-## Credits
+## Authors
 
 * Sam Rapowitz
 * Leslie Crouch
