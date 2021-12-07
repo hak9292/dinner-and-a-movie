@@ -54,7 +54,7 @@ THEN it gives me a new movie theater
 ```
 ## User Flow Diagram
 
-![alt text](.assets/images/userflow.png)
+![alt text](./assets/images/userflow.png)
 ## Demo
 
 
