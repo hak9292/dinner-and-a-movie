@@ -1,0 +1,107 @@
+
+:root {
+    --custompink:rgb(210, 41, 80);
+    
+  }
+
+  .custom-btn {
+    background-color: var(--custompink);
+    color:rgb(242, 240, 240)
+  }
+        .custom-btn:hover { 
+            color: rgba(245, 168, 85, 0.975);
+            }
+  
+  body {
+    font-family: sans-serif;
+    margin: 5px;
+    background-color:rgb(242, 240, 240);
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* .flex-small-cards {
+    justify-content: center;
+    display: flex; 
+    flex-wrap: wrap;
+    margin-top: 2%;
+    margin-right: 5%;
+    justify-content: space-around;
+ } */
+
+h1 {
+    margin-top: 25px;
+    width: 100%;
+    /* margin: 5px; */
+    padding-top: 20px;
+    height: 100px;
+    color: white;
+    text-align: center;
+    /* float: center; */
+    background-image: url(../images/bubbles2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+
+}
+ .card {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-self: center; */
+    /* align-self: center; */
+    align-content: center;
+    width: 50%; 
+    border-style: none;
+    /* border-width: 1px; 
+    border-style: solid;
+    border-radius: 5px; */
+    background: transparent;
+}
+.card-body {
+    background-color: #E5E5E5;
+    border-width: 1px; 
+    border-style: solid;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.card-header{
+    color: white;
+    border-radius: 5px;
+    border-color: black;
+    background-color: rgb(210, 41, 80);
+    border-width: 1px; 
+    border-style: solid;
+    justify-content: center;
+   
+}
+
+/* @media screen and (max-width: 992px){
+    .card {
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .card {
+        width: 100%;
+    }
+} */
