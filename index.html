@@ -1,12 +1,81 @@
+<!--Given an input field
+
+When I input my zip code
+
+Then I am presented with a restaurant and a movie theater
+
+When I look at the restaurant
+
+Then I see the name, phone number, and address of the restaurant
+
+When I look at the movie theater
+
+Then I see the name, and address of the movie theater
+
+When I click "go back"
+
+Then I am brought back to the input zip code page
+
+When I click "reshuffle" under  the restaurant that it provides for me
+
+Then it gives me a new restaurant
+
+When I click "reshuffle" under the movie theater that it provides for me
+
+Then it gives me a new movie theater-->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Dinner and a Movie</title>
 </head>
+
 <body>
-    
+    <header class="container">
+        <h1 class="mt-10">Dinner and a Movie Generator</h1>
+    </header>
+    <div class="container">
+        <div class="card col-4">
+            <h3 class="card-header">
+                No idea where to go for date night? Let us help! &#128512
+            </h3>
+            <div class="card-body">
+                <form>
+                    <label class="card-text">Enter your zipcode:</label>
+                    <input type="text" id="searched-zipcode" placeholder="30301">
+                </form>
+            </div>
+        </div>
+
+        <div class="card col-4">
+            <h3 class="card-header">
+                How about grabbing dinner here?
+            </h3>
+            <div class="card-body">
+                <display id="restaurant-API-output">
+                </display>
+                <a href="#" class="btn custom-btn">Try Again</a>
+            </div>
+        </div>
+
+        <div class="card col-4  ">
+            <h3 class="card-header">
+                And catching a movie here?
+            </h3>
+            <div class="card-body">
+                <display id="movie-API-output" ></display>
+                <a href="#" class="btn custom-btn">Try Again</a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="./assets/JS/script.js"></script>
 </body>
+
 </html>
