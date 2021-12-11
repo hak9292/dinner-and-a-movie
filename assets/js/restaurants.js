@@ -1,6 +1,6 @@
 var APIKey = 'JQQVfzZ0V6AWGJY29qv5JWeDuv2zOB9i';
-var lat = 37.337;
-var lon = -121.89;
+// var lat = 37.337;
+// var lon = -121.89;
 var restaurantInfo;
 var restaurantName;
 var restaurantCategories;
@@ -44,7 +44,7 @@ var requestOptions = {
     }
 
 // when the submit button is clicked, generate restaurants
-submitBtn.on("click", fetchRestaurantAPI);
+// submitBtn.on("click", fetchRestaurantAPI);
 
 // Append restaurant content to restaurant card
 function addRestaurantContent() {
