@@ -38,6 +38,7 @@ function printZipApiOutput(data) {
     lat = data.lat;
     lon = data.lon;
     fetchRestaurantAPI();
+    getNearbyTheater();
 }
 
 // will use in case I find a good backup API for the zip
