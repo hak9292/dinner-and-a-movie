@@ -1,25 +1,18 @@
 //zip-code api call
-
-
-
-var zipCodeBaseUrl = 'https://www.zipcodeapi.com/rest'; //50 requests per hour, 250 max per day 
-var zipAPIKey = 'uAFMqf3SzWZK3GgF5EnCFem0VTjSf1Pl0H0ZH25RAjs5abpIncPNpM8CN3TQfgv7';
+var zipCodeBaseURL = "http://api.openweathermap.org/geo/1.0/zip?zip=";
+var zipAPIKey = "c26d4f483a9680cf07042618df1ef271";
 var format = 'json';
 var zipCode = '';
 var units = 'degrees';
-var sep = '/';
-// var requestOptions = {
-//     method: 'GET',
-//     redirect: 'follow'
-// };                   <--trying to get around cors, did not work
-
 var searchInput = document.getElementById('searched-zipcode');//gets user input from html
-//function fetches zip code API  ?How to validate a zip code?
+
+
+//function fetches zip code API  ?How to validate a zip code?  
 function fetchZipCodeData() {
-    searchString = searchInput.value;
+    searchString = zipVerify(searchInput.value);
     if (searchString) {
         zipCode = searchString;
-        var url = zipCodeBaseUrl + sep + zipAPIKey + sep + 'info.' + format + sep + zipCode + sep + units;
+        var url = zipCodeBaseURL + zipCode + "&appid=" + zipAPIKey;
 
         fetch(url).then(function (response) {
             return response.json();
@@ -57,4 +50,14 @@ function callBackupZipCodeApi(zip) {
     }).catch(function (err) {
         console.error(err);
     });
+}
+
+
+function zipVerify(zip) {
+    const regex =  new RegExp('\\d{5}'); //this tests that for searchString user entered 5 digits
+    if (regex.test(zip)) {
+        return zip;
+    } else {
+        return '';
+    }
 }
