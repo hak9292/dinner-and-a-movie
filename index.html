@@ -48,7 +48,7 @@ Then it gives me a new movie theater-->
                 <form>
                     <label class="card-text">Enter your zipcode:</label>
                     <input type="text" id="searched-zipcode" placeholder="30301">
-                    <a href="#" onclick="fetchZipCodeData(); return false;" class="btn custom-btn">Submit</a>
+                    <a href="#" onclick="fetchZipCodeData(); return false;" class="btn custom-btn" id="submit-btn">Submit</a>
                 </form>
             </div>
         </div>
@@ -60,7 +60,8 @@ Then it gives me a new movie theater-->
             <div class="card-body">
                 <display id="restaurant-API-output">
                 </display>
-                <a href="#" class="btn custom-btn">Try Again</a>
+                <br>
+                <a href="#" class="btn custom-btn" id="restaurant-btn">Try Again</a>
             </div>
         </div>
 
