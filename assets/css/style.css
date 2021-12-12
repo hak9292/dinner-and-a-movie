@@ -19,35 +19,27 @@
 
 }
 
+
 .container {
-    display: flex;
+    display: flex; 
     flex-wrap: wrap;
-    /* flex-direction: column; */
-    /* justify-content: center; */
+    /* justify-content: center;  */
     width: 100%;
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
 }
 
-/* .flex-small-cards {
-    justify-content: center;
-    display: flex; 
-    flex-wrap: wrap;
-    margin-top: 2%;
-    margin-right: 5%;
-    justify-content: space-around;
- } */
+
 
 h1 {
+    font-size: 55px;
     margin-top: 25px;
     width: 100%;
-    /* margin: 5px; */
     padding-top: 20px;
     height: 100px;
     color: white;
     text-align: center;
-    /* float: center; */
     background-image: url(../images/bubbles2.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -56,16 +48,11 @@ h1 {
 }
  .card {
     justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-self: center; */
-    /* align-self: center; */
+    /* display: flex;
+    flex-wrap: wrap; */
     align-content: center;
-    width: 50%; 
+    /* width: 50%;  */
     border-style: none;
-    /* border-width: 1px; 
-    border-style: solid;
-    border-radius: 5px; */
     background: transparent;
 }
 .card-body {
@@ -87,21 +74,10 @@ h1 {
    
 }
 
-/* @media screen and (max-width: 992px){
-    .card {
-        width: 50%;
+/* 
+@media screen and (max-width: 920px) {
+    main {
+      flex-direction: column;
     }
-}
-
-
-@media screen and (max-width: 768px){
-    .container {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 600px){
-    .card {
-        width: 100%;
-    }
-} */
+  }
+   */

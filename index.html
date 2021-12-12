@@ -29,58 +29,72 @@ Then it gives me a new movie theater-->
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Dinner and a Movie</title>
 </head>
 
 <body>
     <header class="container">
-        <h1 class="mt-10">Dinner and a Movie Generator</h1>
+        <h1 class="mt-10">Dinner and a Movie Generator</h1><!--how to make Generator fit to background image-->
     </header>
-    <div class="container">
-        <div class="card col-4">
-            <h3 class="card-header">
-                No idea where to go for date night? Let us help! &#128512
-            </h3>
-            <div class="card-body">
-                <form>
-                    <label class="card-text">Enter your zipcode:</label>
-                    <input type="text" id="searched-zipcode" placeholder="30301">
-                    <a href="#" onclick="fetchZipCodeData(); return false;" class="btn custom-btn" id="submit-btn">Submit</a>
-                </form>
+    <main class="container">
+        <section class="row">
+            <div class="col mb-3">
+                <h2></h2>
             </div>
-        </div>
+        </section>
+        <div class="container">
+            <div class="row justify-content-center" ">
+                <div class="col" style="min-width: 30%;"><!--how to get cards in a column for small screens? how to pad between cards in a column? have tried margin and padding classes-->
+                    <div class="card" >
+                        <h3 class="card-header">
+                            No idea where to go for date night? Let us help! &#128512
+                        </h3>
+                        <div class="card-body">
+                            <form>
+                                <label class="card-text">Enter your zipcode:</label>
+                                <input type="text" id="searched-zipcode" placeholder="30301">
+                                <a href="#" onclick="fetchZipCodeData(); return false;" class="btn custom-btn"
+                                    id="submit-btn">Submit</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="min-width: 30%;">
+                    <div class="card">
+                        <h3 class="card-header">
+                            How about grabbing dinner here?
+                        </h3>
+                        <div class="card-body">
+                            <display id="restaurant-API-output">
+                            </display>
+                            <a href="#" class="btn custom-btn" id="restaurant-btn">Try Again</a>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="card col-4">
-            <h3 class="card-header">
-                How about grabbing dinner here?
-            </h3>
-            <div class="card-body">
-                <display id="restaurant-API-output">
-                </display>
-                <br>
-                <a href="#" class="btn custom-btn" id="restaurant-btn">Try Again</a>
+                <div class="col" style="min-width: 30%;">
+                    <div class="card" >
+                        <h3 class="card-header">
+                            And catching a movie here?
+                        </h3>
+                        <div class="card-body">
+                            <display id="movie-API-output"></display>
+                            <a href="#" onclick="getNearbyTheater(); return false;" class="btn custom-btn">Try
+                                Again</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="card col-4  ">
-            <h3 class="card-header">
-                And catching a movie here?
-            </h3>
-            <div class="card-body">
-                <display id="movie-API-output" ></display>
-                <a href="#" class="btn custom-btn">Try Again</a>
-            </div>
-        </div>
-    </div>
-    </div>
+    </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./assets/JS/script.js"></script>
-    <script src="assets/js/restaurants.js"></script>
-    <script src="assets/js/movie-theatres.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/restaurants.js"></script>
+    <script src="./assets/js/movie-theatres.js"></script>
 
 </body>
 
