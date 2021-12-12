@@ -8,7 +8,7 @@ var searchInput = document.getElementById('searched-zipcode');//gets user input 
 var lat;
 var lon;
 
-//function fetches zip code API  ?How to validate a zip code?  
+//function fetches zip code API   
 function fetchZipCodeData() {
     searchString = zipVerify(searchInput.value);
     if (searchString) {
@@ -18,13 +18,12 @@ function fetchZipCodeData() {
         fetch(url).then(function (response) {
             return response.json();
         }).then(function (data) {
-            if (!data) {//lookup if status not 200
+            if (!data) {
                 console.error("No response from server, check request.");
             } else {
                 printZipApiOutput(data);
             }
         }).catch(function (err) {
-            // callBackupZipCodeApi(url);
             console.error(err);
         });
     } else {
@@ -38,23 +37,9 @@ function printZipApiOutput(data) {
     lat = data.lat;
     lon = data.lon;
     fetchRestaurantAPI();
+    getNearbyTheater(); 
 }
 
-// will use in case I find a good backup API for the zip
-// function callBackupZipCodeApi(zip) {
-//     var backupUrl = '';
-//     fetch(backupUrl).then(function (response) {
-//         return response.json();
-//     }).then(function (data) {
-//         if (!data) {
-//             console.error("No response from server, check request.");
-//         } else {
-//             printZipApiOutput(data);
-//         }
-//     }).catch(function (err) {
-//         console.error(err);
-//     });
-// }
 
 
 function zipVerify(zip) {

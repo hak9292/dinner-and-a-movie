@@ -17,6 +17,7 @@ function getNearbyTheater() {
     .then(response => response.json())
     .then(result => collectNearbyTheaters(result))
     .catch(error => console.log('error', error));
+    movieCard.text('');//to clear between reshuffles
 
 }
 
@@ -32,6 +33,7 @@ function collectNearbyTheaters (result) {
 }
 
 function renderNearbyTheaters() {
+
     $('<div id= "nearbyTheater"> </div>').appendTo("#movie-API-output");
     $(`<p id="theaterName"> ${theaterName} </p><br>`).appendTo("#nearbyTheater");
     $(`<p id="theaterAdd"> ${theaterAddress} </p>`).appendTo("#nearbyTheater");

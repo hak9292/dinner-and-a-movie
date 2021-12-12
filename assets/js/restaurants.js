@@ -11,6 +11,7 @@ var submitBtn = $('#submit-btn');
 var restaurantBtn = $('#restaurant-btn');
 var lineBreak = $('<br>');
 var lineBreak2 = $('<br>');
+var lineBreak3 = $('<br>');
 
 var requestOptions = {
     method: 'GET',
@@ -18,7 +19,7 @@ var requestOptions = {
   };
 
   function fetchRestaurantAPI () {
-    fetch("https://api.tomtom.com/search/2/poiSearch/petrol station.json?query=restaurants&lat=" + lat +  "&lon=" + lon + "&limit=100&radius=1600&key=" + APIKey, requestOptions)
+    fetch("https://api.tomtom.com/search/2/poiSearch/petrol%20station.json?query=restaurants&lat=" + lat +  "&lon=" + lon + "&limit=100&radius=1600&key=" + APIKey, requestOptions)
         .then(response => response.json())
         .then(result => printRestaurant(result))
         .catch(error => console.log('error', error));
@@ -48,7 +49,7 @@ var requestOptions = {
 
 // Append restaurant content to restaurant card
 function addRestaurantContent() {
-    restaurantCard.append(restaurantName, lineBreak, cuisineType, lineBreak2, restaurantAddress);
+    restaurantCard.append(restaurantName, lineBreak, cuisineType, lineBreak2, restaurantAddress, lineBreak3);
 }
 
 restaurantBtn.on("click", fetchRestaurantAPI);
