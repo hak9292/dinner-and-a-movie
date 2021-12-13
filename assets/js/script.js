@@ -1,5 +1,5 @@
 //zip-code api call
-var zipCodeBaseURL = "http://api.openweathermap.org/geo/1.0/zip?zip=";
+var zipCodeBaseURL = "https://api.openweathermap.org/geo/1.0/zip?zip=";
 var zipAPIKey = "c26d4f483a9680cf07042618df1ef271";
 var format = 'json';
 var zipCode = '';
