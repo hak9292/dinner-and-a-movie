@@ -55,8 +55,12 @@ THEN it gives me a new movie theater, and local storage is updated
 ## User Flow Diagram
 
 ![alt text](./assets/images/userflow.jpeg)
+
 ## Demo
 
+### Image of Deployed Application
+
+![Deployed Application Page](assets/images/screenshot.jpeg)
 
 ### Link to Deployed Page
 You can try out the finished application here:
