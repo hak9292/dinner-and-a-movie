@@ -7,11 +7,43 @@ var units = 'degrees';
 var searchInput = document.getElementById('searched-zipcode');//gets user input from html
 var lat;
 var lon;
+var userSearchHistory = [];
+
+// local storage
+var storedUserSearchHistory = localStorage.getItem('user-search-history');
+if (storedUserSearchHistory) {
+    userSearchHistory = JSON.parse(storedUserSearchHistory);
+}
+createHistoryButtons();
+
+function createHistoryButtons() {
+    var userSearchButtons = document.getElementById("user-search-buttons");
+    userSearchButtons.innerHTML = '';
+    for (var i = 0; i < userSearchHistory.length; i++) {
+        var historyButton = document.createElement("button");
+        historyButton.textContent = userSearchHistory[i];
+        historyButton.addEventListener("click", getSearchButtonZipCode);
+        userSearchButtons.append(historyButton);
+    }
+}
+
+function getSearchButtonZipCode(e) {
+    e.preventDefault();
+    searchInput.value = this.textContent;
+    fetchZipCodeData();
+}
+
 
 //function fetches zip code API   
+
 function fetchZipCodeData() {
     searchString = zipVerify(searchInput.value);
     if (searchString) {
+        if (!userSearchHistory.includes(searchString)) {
+            userSearchHistory.push(searchString);
+            localStorage.setItem('user-search-history', JSON.stringify(userSearchHistory));
+            createHistoryButtons();
+        }
         zipCode = searchString;
         var url = zipCodeBaseURL + zipCode + "&appid=" + zipAPIKey;
 
