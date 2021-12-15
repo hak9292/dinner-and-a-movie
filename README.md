@@ -18,7 +18,7 @@ To try and address that challenge, we created a web application to give you some
 For version 1, we collect a list of local eateries and cinemas. We then present them randomly to the date-goer one at a time. The user has the option to reshuffle their options until they get a combination they are happy with, or they can begin again with perhaps a different zip code.
 
 This web app leverages several public APIs to generate a list of local recommendations.
-- The [movieglu API](https://developer.movieglu.com/v2/api-index/) helped collect a list of theaters in the area.
+- The [TomTom's search API](https://developer.tomtom.com/search-api/search-api-documentation) helped collect a list of theaters in the area.
 - [TomTom's search API](https://developer.tomtom.com/search-api/search-api-documentation) helped us produce a list of nearby restaurants. Currently you can not filter by cuisine type, which can be both an advantage and disadvantage when you are trying to coordinate the perfect evening
 - Additionally, [OpenWeather's API](https://openweathermap.org/current#zip) was able to give us coordinates that were necessary for interacting with the other APIs
 
@@ -34,23 +34,23 @@ SO THAT I do not have to stress about planning a date on my own
 ## Acceptance Criteria
 ```
 GIVEN an input field
-WHEN I input my zip code 
+WHEN I input my zip code and click submit
 THEN I am presented with a restaurant and a movie theater
 
 WHEN I look at the restaurant
-THEN I see the name, phone number, and address of the restaurant
+THEN I see the name, cuisine type, and address of the restaurant
 
 WHEN I look at the movie theater
-THEN I see the name, and address of the movie theater
+THEN I see the name and address of the movie theater
 
-WHEN I click "go back"
-THEN I am returned to the input zip code page
+WHEN I click "Submit"
+THEN the zip code, restaurant info, and movie theater info are saved into local storage
 
-WHEN I click "reshuffle" under the restaurant that it provides for me
-THEN it gives me a new restaurant
+WHEN I click "Try Again" under the restaurant that it provides for me
+THEN it gives me a new restaurant, and local storage is updated
 
-WHEN I click "reshuffle" under the movie theater that it provides for me
-THEN it gives me a new movie theater
+WHEN I click "Try Again" under the movie theater that it provides for me
+THEN it gives me a new movie theater, and local storage is updated
 ```
 ## User Flow Diagram
 

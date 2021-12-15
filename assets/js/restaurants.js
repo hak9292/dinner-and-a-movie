@@ -12,6 +12,7 @@ var restaurantBtn = $('#restaurant-btn');
 var lineBreak = $('<br>');
 var lineBreak2 = $('<br>');
 var lineBreak3 = $('<br>');
+var saveRestaurant;
 
 var requestOptions = {
     method: 'GET',
@@ -50,6 +51,12 @@ var requestOptions = {
 // Append restaurant content to restaurant card
 function addRestaurantContent() {
     restaurantCard.append(restaurantName, lineBreak, cuisineType, lineBreak2, restaurantAddress, lineBreak3);
+    saveRestaurant = [{
+        "Name": restaurantName,
+        "Cusine Type": cuisineType,
+        "Restaurant Address": restaurantAddress
+    }];
+    window.localStorage.setItem('restaurant', JSON.stringify(saveRestaurant));
 }
 
 restaurantBtn.on("click", fetchRestaurantAPI);
