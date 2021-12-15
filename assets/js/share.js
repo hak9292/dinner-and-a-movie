@@ -91,6 +91,7 @@ function freatePage() {
         var createdLink = response.result.url;
         var linkEl = $("#link");
         linkEl.text(createdLink);
+        linkEl.attr('href', createdLink); // makes link clickable.
     });
 };
 // var createdLink = response.
