@@ -1,7 +1,8 @@
 var auth = 'FLMPSIT7JM3ehGI0y5MWDZ46eeg00v29';
 var theaterName;
-var theaterAdd;
+var theaterAddress;
 var movieCard = $('#movie-API-output');
+var theater;
 
 var requestOptions = {
     method: 'GET',
@@ -11,7 +12,6 @@ var requestOptions = {
 function getNearbyTheater() {
 
     var apiUrl = `https://api.tomtom.com/search/2/poiSearch/movie%20theatre.json?lat=${lat}&lon=${lon}&categorySet=7342&key=${auth}`;
-    console.log(apiUrl);
 
     fetch(apiUrl, requestOptions)
     .then(response => response.json())
@@ -27,9 +27,8 @@ function collectNearbyTheaters (result) {
     theaterName = theaterInfo.poi.name;
     theaterAddress = theaterInfo.address.freeformAddress;
 
-    console.log(randResult);
-
     renderNearbyTheaters();
+    saveRecentCinema(theaterInfo);
 }
 
 function renderNearbyTheaters() {
@@ -38,4 +37,12 @@ function renderNearbyTheaters() {
     $(`<p id="theaterName"> ${theaterName} </p><br>`).appendTo("#nearbyTheater");
     $(`<p id="theaterAdd"> ${theaterAddress} </p>`).appendTo("#nearbyTheater");
 
+}
+
+function saveRecentCinema () {
+    theater = [{
+        "Name": theaterName,
+        "Address": theaterAddress
+    }];
+    localStorage.setItem("theater", JSON.stringify(theater));
 }
