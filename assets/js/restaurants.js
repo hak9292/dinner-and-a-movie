@@ -51,6 +51,10 @@ var requestOptions = {
 // Append restaurant content to restaurant card
 function addRestaurantContent() {
     restaurantCard.append(restaurantName, lineBreak, cuisineType, lineBreak2, restaurantAddress, lineBreak3);
+    saveRestaurantFunction();
+}
+
+function saveRestaurantFunction() {
     saveRestaurant = [{
         "Name": restaurantName,
         "Cusine Type": cuisineType,
