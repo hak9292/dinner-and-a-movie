@@ -71,3 +71,8 @@ h1 {
     justify-content: center;
    
 }
+
+#copy {
+    margin: 5px;
+    padding: 3px;
+}

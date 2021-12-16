@@ -60,7 +60,7 @@ THEN it gives me a new movie theater, and local storage is updated
 
 ### Image of Deployed Application
 
-![Deployed Application Page](assets/images/screenshot.jpeg)
+![Deployed Application Page](assets/images/screenshot.png)
 
 ### Link to Deployed Page
 You can try out the finished application here:

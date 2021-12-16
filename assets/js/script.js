@@ -23,6 +23,7 @@ function createHistoryButtons() {
         var historyButton = document.createElement("button");
         historyButton.textContent = userSearchHistory[i];
         historyButton.addEventListener("click", getSearchButtonZipCode);
+        historyButton.setAttribute("style", "margin: 5px; padding: 3px");
         userSearchButtons.append(historyButton);
     }
 }
