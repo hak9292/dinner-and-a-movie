@@ -51,6 +51,12 @@ THEN it gives me a new restaurant, and local storage is updated
 
 WHEN I click "Try Again" under the movie theater that it provides for me
 THEN it gives me a new movie theater, and local storage is updated
+
+WHEN I click "Share"
+THEN a link containing all restaurant and movie theater info is created and displayed to the user
+
+WHEN I click "Copy Link"
+THEN that link will copy to your clipboard
 ```
 ## User Flow Diagram
 
@@ -60,7 +66,7 @@ THEN it gives me a new movie theater, and local storage is updated
 
 ### Image of Deployed Application
 
-![Deployed Application Page](assets/images/screenshot.jpeg)
+![Deployed Application Page](assets/images/demo.gif)
 
 ### Link to Deployed Page
 You can try out the finished application here:
