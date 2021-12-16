@@ -65,7 +65,7 @@ THEN that link will copy to your clipboard
 ## Demo
 
 ![Deployed Application Page GIF](assets/images/demo.gif)
-### Image of Deployed Application
+### Images of Deployed Application
 
 ![Deployed Application Page](assets/images/screenshot.png)
 ![Deployed Application Page2](assets/images/screenshot2.png)
