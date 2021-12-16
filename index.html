@@ -19,7 +19,7 @@
                         No idea where to go for date night? Let us help! &#128512
                     </h3>
                     <div class="card-body">
-                        <form>
+                        <form id= "enter-zip">
                             <label class="card-text">Enter your zipcode:</label>
                             <input type="text" id="searched-zipcode" placeholder="30301">
                             <a href="#" onclick="fetchZipCodeData(); return false;" class="btn custom-btn"
@@ -55,9 +55,13 @@
                 </div>
             </div>
             </div>
-            <a href="#" class="btn custom-btn" id="share-btn">Share</a>
+            <a href="#" class="btn custom-btn hidden" id="share-btn">Share</a>
             <a href="#" id="link"></a>
-            <button class="btn custom-btn" onclick="copyToClipboard()">Copy Link</button>
+            <button id="copyToClipboard" class="btn custom-btn hidden" onclick="copyToClipboard()">Copy Link</button>
+        </div>
+
+
+        
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

@@ -1,73 +1,71 @@
 
 :root {
     --custompink:rgb(210, 41, 80);
-    
   }
 
-  .custom-btn {
+.custom-btn {
     background-color: var(--custompink);
-    color:rgb(242, 240, 240)
-  }
-        .custom-btn:hover { 
-            color: rgba(245, 168, 85, 0.975);
-            }
+    color:#f2f0f0;
+    margin-top: 1rem;
+}
+.custom-btn:hover { 
+    color: rgba(245, 168, 85, 0.975);
+}
   
-  body {
+body {
     font-family: sans-serif;
     margin: 5px;
     background-color:rgb(242, 240, 240);
 
 }
-
-
 .container {
     display: flex; 
     flex-wrap: wrap;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    flex-direction: column;
 }
-
-
 h1 {
-    font-size: 55px;
+    font-size: 4rem;
     color: white;
     height: auto;
     width: auto;
     justify-self: center;
     justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    padding: 2rem;
+    margin: 0 0 2rem 0;
     text-align: center;
     background-image: url(../images/bubbles2.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-    border-radius: 5px;
 }
 
  .card {
     justify-content: center;
     align-content: center;
-    border-style: none;
     background: transparent;
 }
 .card-body {
     background-color: #E5E5E5;
-    border-width: 1px; 
-    border-style: solid;
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px;
     justify-content: center;
 }
 
 .card-header{
     color: white;
-    border-radius: 5px;
-    border-color: black;
-    background-color: rgb(210, 41, 80);
-    border-width: 1px; 
-    border-style: solid;
+    border-radius: 5px 5px 0 0;
+    background-color: var(--custompink);
     justify-content: center;
    
+}
+
+#enter-zip {
+    margin-bottom: 2rem;
+}
+
+.history-btn {
+    background-color: #E5E5E5;
+    color: var(--custompink);
+}
+
+.hidden {
+    display: none;
 }
