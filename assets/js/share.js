@@ -71,6 +71,9 @@ function copyToClipboard() {
     $temp.val(linkEl[0].innerText).select();
     document.execCommand("copy");
     $temp.remove();
+    var successEl = $("#link");
+    var success = "Your link has been copied to your clipboard!"
+    successEl.text(success);
 }
 
 shareBtn.on("click", freatePage);
