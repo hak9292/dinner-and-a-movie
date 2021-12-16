@@ -46,6 +46,12 @@ THEN I see the name and address of the movie theater
 WHEN I click "Submit"
 THEN the zip code, restaurant info, and movie theater info are saved into local storage
 
+WHEN I click "Share"
+THEN a link containing all restaurant and movie theater info is created and displayed to the user
+
+WHEN I click "Copy Link"
+THEN that link will copy to your clipboard
+
 WHEN I click "Try Again" under the restaurant that it provides for me
 THEN it gives me a new restaurant, and local storage is updated
 
@@ -60,7 +66,7 @@ THEN it gives me a new movie theater, and local storage is updated
 
 ### Image of Deployed Application
 
-![Deployed Application Page](assets/images/screenshot.jpeg)
+![Deployed Application Page](assets/images/demo.gif)
 
 ### Link to Deployed Page
 You can try out the finished application here:
