@@ -8,6 +8,7 @@ var searchInput = document.getElementById('searched-zipcode');//gets user input 
 var lat;
 var lon;
 var userSearchHistory = [];
+var errorDiv = document.getElementById('error');
 
 // local storage
 var storedUserSearchHistory = localStorage.getItem('user-search-history');
@@ -42,6 +43,7 @@ function getSearchButtonZipCode(e) {
 function fetchZipCodeData() {
     searchString = zipVerify(searchInput.value);
     if (searchString) {
+        errorDiv.textContent='';
         if (!userSearchHistory.includes(searchString)) {
             userSearchHistory.push(searchString);
             localStorage.setItem('user-search-history', JSON.stringify(userSearchHistory));
@@ -62,7 +64,7 @@ function fetchZipCodeData() {
             console.error(err);
         });
     } else {
-        console.error("This is not valid zip-code.");
+        errorDiv.textContent = "This is not valid zip-code.";
     }
 }
 
