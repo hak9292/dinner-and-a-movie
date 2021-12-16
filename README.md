@@ -68,6 +68,8 @@ THEN that link will copy to your clipboard
 
 ![Deployed Application Page](assets/images/demo.gif)
 
+![Deployed Application Page](assets/images/screenshot.png)
+
 ### Link to Deployed Page
 You can try out the finished application here:
 
