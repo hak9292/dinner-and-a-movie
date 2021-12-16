@@ -61,6 +61,7 @@ function freatePage() {
         var linkEl = $("#link");
         linkEl.text(createdLink);
         linkEl.attr("href", createdLink);
+        $("#copyToClipboard").removeClass( "hidden" );
     });
 
 };
