@@ -64,9 +64,12 @@ THEN that link will copy to your clipboard
 
 ## Demo
 
+![Deployed Application Page GIF](assets/images/demo.gif)
 ### Image of Deployed Application
 
-![Deployed Application Page](assets/images/demo.gif)
+![Deployed Application Page](assets/images/screenshot.png)
+![Deployed Application Page2](assets/images/screenshot2.png)
+![Share Page](assets/images/screenshot3.png)
 
 ### Link to Deployed Page
 You can try out the finished application here:
