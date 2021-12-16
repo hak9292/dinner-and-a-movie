@@ -21,6 +21,8 @@ function createHistoryButtons() {
     userSearchButtons.innerHTML = '';
     for (var i = 0; i < userSearchHistory.length; i++) {
         var historyButton = document.createElement("button");
+        historyButton.classList.add('btn');
+        historyButton.classList.add("history-btn");
         historyButton.textContent = userSearchHistory[i];
         historyButton.addEventListener("click", getSearchButtonZipCode);
         historyButton.setAttribute("style", "margin: 5px; padding: 3px");
@@ -70,7 +72,8 @@ function printZipApiOutput(data) {
     lat = data.lat;
     lon = data.lon;
     fetchRestaurantAPI();
-    getNearbyTheater(); 
+    getNearbyTheater();
+    document.getElementById("share-btn").classList.remove("hidden");
 }
 
 
